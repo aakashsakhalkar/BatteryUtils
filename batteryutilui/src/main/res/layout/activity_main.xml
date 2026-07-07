@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    tools:context=".MainFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BatteryUtils Demo"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tv_last_updated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:alpha="0.6"
+            android:layout_marginBottom="12dp"
+            tools:text="Last updated: 12:00:00" />
+
+        <!-- ===================== CORE ===================== -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Material3.CardView.Elevated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/TextAppearance.Material3.TitleMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Core"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView android:id="@+id/tv_percentage" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Percentage: 82%" />
+                <TextView android:id="@+id/tv_level_scale" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Level / Scale: 82 / 100" />
+                <TextView android:id="@+id/tv_status" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Status: CHARGING" />
+                <TextView android:id="@+id/tv_health" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Health: GOOD" />
+                <TextView android:id="@+id/tv_charging_type" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Charging source: USB" />
+                <TextView android:id="@+id/tv_is_charging" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Is charging: true" />
+                <TextView android:id="@+id/tv_present" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Battery present: true" />
+                <TextView android:id="@+id/tv_battery_low" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Battery low: false" />
+                <TextView android:id="@+id/tv_technology" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Technology: Li-ion" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ===================== TEMPERATURE / VOLTAGE ===================== -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Material3.CardView.Elevated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/TextAppearance.Material3.TitleMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Temperature &amp; Voltage"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView android:id="@+id/tv_temp_c" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Temperature: 28.5°C" />
+                <TextView android:id="@+id/tv_temp_f" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Temperature: 83.3°F" />
+                <TextView android:id="@+id/tv_temp_k" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Temperature: 301.65K" />
+                <TextView android:id="@+id/tv_voltage" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Voltage: 4.20 V" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ===================== CURRENT / POWER / ENERGY ===================== -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Material3.CardView.Elevated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/TextAppearance.Material3.TitleMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current, Power &amp; Energy"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView android:id="@+id/tv_current_now" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Current now: 500 mA" />
+                <TextView android:id="@+id/tv_current_avg" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Current avg: 480 mA" />
+                <TextView android:id="@+id/tv_power" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Power draw: 2.10 W" />
+                <TextView android:id="@+id/tv_charge_counter" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Charge counter: 3200.0 mAh" />
+                <TextView android:id="@+id/tv_energy_counter" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Energy counter: 12.5 Wh" />
+                <TextView android:id="@+id/tv_cycle_count" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Cycle count: N/A (needs API 34+)" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ===================== TIME ESTIMATES ===================== -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Material3.CardView.Elevated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/TextAppearance.Material3.TitleMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time Estimates"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView android:id="@+id/tv_charge_time_remaining" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Charge time remaining: 45m (API 28+)" />
+                <TextView android:id="@+id/tv_discharge_prediction" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Discharge prediction: N/A (API 31+)" />
+                <TextView android:id="@+id/tv_discharge_heuristic" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Discharge estimate (heuristic): N/A" />
+                <TextView android:id="@+id/tv_charging_speed" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Charging speed (heuristic): NORMAL" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ===================== SYSTEM STATE ===================== -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Material3.CardView.Elevated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/TextAppearance.Material3.TitleMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="System State"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView android:id="@+id/tv_battery_saver" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Battery Saver: off" />
+                <TextView android:id="@+id/tv_device_idle" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Device idle (Doze): false" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ===================== HEURISTIC ANALYSIS ===================== -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Material3.CardView.Elevated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/TextAppearance.Material3.TitleMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Heuristic Analysis (not a platform metric)"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView android:id="@+id/tv_score" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Score: 100 / 100" />
+                <TextView android:id="@+id/tv_grade" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Grade: A" />
+                <TextView android:id="@+id/tv_trend" android:layout_width="match_parent" android:layout_height="wrap_content" tools:text="Trend: INSUFFICIENT_DATA" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ===================== CAPABILITIES ===================== -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Material3.CardView.Elevated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/TextAppearance.Material3.TitleMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Device Capabilities"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tv_capabilities"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:textSize="12sp"
+                    tools:text="API level: 34\nisCharging(): true" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ===================== EXPORT ===================== -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Material3.CardView.Elevated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/TextAppearance.Material3.TitleMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Export"
+                    android:layout_marginBottom="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_export_json"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Export as JSON" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_export_bundle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Export as Bundle" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_export_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Export as Map" />
+
+                <TextView
+                    android:id="@+id/tv_export_output"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:textSize="11sp"
+                    android:layout_marginTop="4dp"
+                    tools:text="{...}" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

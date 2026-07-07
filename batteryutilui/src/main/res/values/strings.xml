@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BatteryUtilUI</string>
+    <string name="last_updated_format">Last updated: %s</string>
+
+    <string name="field_percentage">Percentage: %s</string>
+    <string name="field_level_scale">Level / Scale: %d / %d</string>
+    <string name="field_status">Status: %s</string>
+    <string name="field_health">Health: %s</string>
+    <string name="field_charging_type">Charging source: %s</string>
+    <string name="field_is_charging">Is charging: %b</string>
+    <string name="field_present">Battery present: %b</string>
+    <string name="field_battery_low">Battery low: %b</string>
+    <string name="field_technology">Technology: %s</string>
+
+    <string name="field_current_now">Current now: %s</string>
+    <string name="field_current_avg">Current avg: %s</string>
+    <string name="field_power">Power draw: %s</string>
+    <string name="field_charge_counter">Charge counter: %s</string>
+    <string name="field_energy_counter">Energy counter: %s</string>
+    <string name="field_cycle_count">Cycle count: %s</string>
+
+    <string name="field_charge_time_remaining">Charge time remaining: %s</string>
+    <string name="field_discharge_prediction">Discharge prediction: %s</string>
+    <string name="field_discharge_heuristic">Discharge estimate (heuristic): %s</string>
+    <string name="field_charging_speed">Charging speed (heuristic): %s</string>
+
+    <string name="field_battery_saver">Battery Saver: %s</string>
+    <string name="field_device_idle">Device idle (Doze): %b</string>
+
+    <string name="field_score">Score: %d / 100</string>
+    <string name="field_grade">Grade: %s</string>
+    <string name="field_trend">Trend: %s</string>
+
+</resources>

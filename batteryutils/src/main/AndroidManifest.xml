@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        No permissions are required. ACTION_BATTERY_CHANGED is a protected but
+        unrestricted sticky broadcast (no permission needed to receive it), and
+        BatteryManager / PowerManager queries used by this library do not
+        require any manifest permission either.
+    -->
+
+</manifest>
